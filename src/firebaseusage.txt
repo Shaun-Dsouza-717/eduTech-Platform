@@ -1,0 +1,28 @@
+import React, { useEffect } from 'react';
+import { auth, db, storage } from './firebase.js';
+
+function MyComponent() {
+  useEffect(() => {
+    // Use Firebase Firestore
+    db.collection('myCollection').get().then(querySnapshot => {
+      // ...
+    });
+
+    // Use Firebase Authentication
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        // User is signed in
+      } else {
+        // User is signed out
+      }
+    });
+
+    // Use Firebase Storage
+    const storageRef = storage.ref('myFile.txt');
+    storageRef.getDownloadURL().then(url => {
+      // ...
+    });
+  }, []);
+
+  // ...
+}

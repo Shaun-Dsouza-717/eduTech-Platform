@@ -1,0 +1,7 @@
+{
+  "name": "eduTech",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
